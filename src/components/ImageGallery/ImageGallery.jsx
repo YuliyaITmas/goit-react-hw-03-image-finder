@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { api } from 'components/services/getImages';
 
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
@@ -20,6 +21,10 @@ const Status = {
 };
 
 export class ImageGallery extends Component {
+  static propTypes = {
+    value: PropTypes.string.isRequired,
+  };
+
   state = {
     query: '',
     images: [],
@@ -55,6 +60,7 @@ export class ImageGallery extends Component {
           this.setState(prevState => ({
             images:
               page === 1 ? images.hits : [...prevState.images, ...images.hits],
+            query: nextName,
 
             status: Status.RESOLVED,
             totalPages: Math.floor(images.totalHits / 12),
@@ -66,10 +72,11 @@ export class ImageGallery extends Component {
 
   handleLoadMore = event => {
     event.preventDefault();
+    
 
     const { value: query } = this.props;
     this.setState(
-      prevState => ({ page: prevState.page + 1 }),
+      prevState => ({ page: prevState.page + 1, query }),
       () => {
         api
           .getImages(query, this.state.page)
