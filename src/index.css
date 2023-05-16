@@ -13,3 +13,134 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: #212121;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+/* // export class ImageGallery extends Component {
+  //   state = {
+  //     query: '',
+  //     // loading: false,
+  //     error: null,
+  //     status: 'idle',
+  //   };
+  
+  //   componentDidUpdate(prevProps, prevState) {
+  //     if (prevProps.searchValue !== this.props.searchValue) {
+  //       console.log('value was changed');
+  //       console.log('this is prevState:', prevState);
+  //       console.log('this is thisState:', this.state.query);
+  //       console.log('this is prevProps:', prevProps);
+  //       console.log('this is thisProps:', this.props);
+  //       // this.setState({ loading: true, query: '', error: null });
+  //       this.setState({ status: 'pending' });
+  //       fetch(
+  //         `https://pixabay.com/api/?q=${this.props.searchValue}&page=1&key=8586853-360208b22f98fbf99c050b060&image_type=photo&orientation=horizontal&per_page=12`
+  //       )
+  //         .then(response => {
+  //           if (response.ok) {
+  //             return response.json();
+  //           }
+  //           return Promise.reject(
+  //             new Error(`Sorry, we couldn't find ${this.props.searchValue} `)
+  //           );
+  //         })
+  //         // .then(query => this.setState({ query }))
+  //         .then(query => this.setState({ query, status: 'resolved' }))
+  //         // .catch(error => this.setState({ error }))
+  //         .catch(error => this.setState({ error, status: 'rejected' }));
+  //       // .finally(() => this.setState({ loading: false }));
+  //     }
+  //   }
+  //   render() {
+  //     const { loading, query, error, status } = this.state;
+  //     // const { searchValue } = this.props;
+  
+  //     if (status === 'idle') {
+  //       return <div>Input somthing</div>;
+  //     }
+  //     if (status === 'pending') {
+  //       return <div>LOading....</div>;
+  //     }
+  //     if (status === 'rejected') {
+  //       <h1>{error.message}</h1>;
+  //     }
+  //     // if (query.total === 0) {
+  //     //   return (
+  //     //     <div>
+  //     //       message={`Sorry, we couldn't find ${this.props.searchValue} `}
+  //     //     </div>
+  //     //   );
+  //     // }
+  //     if (status === 'resolved') {
+  //       return (
+  //         <>
+  //           <List>
+  //             {query.hits.map(({ id, webformatURL, tags, largeImageURL }) => {
+  //               return (
+  //                 <ImageGalleryItem
+  //                   key={id}
+  //                   webformatURL={webformatURL}
+  //                   tags={tags}
+  //                 />
+  //               );
+  //             })}
+  //           </List>
+  //         </>
+  //       );
+  //     }
+  //     // return (
+  //     //   <>
+  //     //     {error && <h1>{error.message}</h1>}
+  //     //     {loading && <div>LOading....</div>}
+  //     //     {!searchValue && <div>Input somthing</div>}
+  //     //     {query && (
+  //     //       <List>
+  //     //         {query.hits.map(({ id, webformatURL, tags, largeImageURL }) => {
+  //     //           return (
+  //     //             <ImageGalleryItem
+  //     //               key={id}
+  //     //               webformatURL={webformatURL}
+  //     //               tags={tags}
+  //     //             />
+  //     //           );
+  //     //         })}
+  //     //       </List>
+  //     //     )}
+  //     //   </>
+  //     // );
+  //   }
+  // }
+   */
