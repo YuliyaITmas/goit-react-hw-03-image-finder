@@ -19,9 +19,11 @@ export class App extends Component {
   render() {
     return (
       <Container>
+        
         <Searchbar onSubmit={this.handleFormSubmit} />
         <ImageGallery value={this.state.searchValue} />
         <ToastContainer autoClose={3000} />
+
       </Container>
     );
   }
