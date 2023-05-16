@@ -46,7 +46,7 @@ export class ImageGallery extends Component {
       this.setState({
         status: Status.PENDING,
         images: [],
-        page:1,
+        page: 1,
       });
 
       api
