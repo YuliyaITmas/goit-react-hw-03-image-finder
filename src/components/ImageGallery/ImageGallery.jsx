@@ -39,7 +39,7 @@ export class ImageGallery extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { page, query } = this.state;
+    const { page } = this.state;
     const prevName = prevProps.value;
     const nextName = this.props.value;
     if (prevName !== nextName) {
